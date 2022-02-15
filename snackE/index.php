@@ -6,11 +6,11 @@ Stampare Nome, Cognome e la media dei voti di ogni alunno.
 */
 
 
-$arrayStundenti = [
+$arrayStudenti = [
     [
-        "name" => "gianni",
-        "surname"=> "carlino",
-        "voti"=>[
+        'name' => 'gianni',
+        'surname'=> 'carlino',
+        'voti'=>[
             10,
             3,
             5,
@@ -19,9 +19,9 @@ $arrayStundenti = [
         ]
     ],
     [
-        "name" => "franco",
-        "surname"=> "giordi",
-        "voti"=>[
+        'name' => 'franco',
+        'surname'=> 'giordi',
+        'voti'=>[
             3,
             3,
             3,
@@ -30,30 +30,30 @@ $arrayStundenti = [
         ]
     ],
     [
-        "name" => "sandra",
-        "surname"=> "sandri",
-        "voti"=>[
+        'name' => 'sandra',
+        'surname'=> 'sandri',
+        'voti'=>[
             10,
             10,
             9,
             10,
             10
         ]
-    ],
+    ]
 ];
 
-for($i = 0; $i < count($arrayStundenti); $i++){
+for($i = 0; $i < count($arrayStudenti); $i++){
     $numero = null;
     $numeroVoti = null;
-    
-    for($index = 0; $index < count($arrayStundenti[$i]["voti"]); $index++){
-        $numero += $arrayStundenti[$i]["voti"][$index];
-        $numeroVoti = count($arrayStundenti[$i]["voti"]);
+    for($index = 0; $index < count($arrayStudenti[$i]["voti"]); $index++){
+        $numero += $arrayStudenti[$i]["voti"][$index];
+        $numeroVoti = count($arrayStudenti[$i]["voti"]);
     }
 
     $media = $numero / $numeroVoti;
 
     $nome = $arrayStudenti[$i]["name"];
+    
     echo "<br> la media di $nome è $media<br>";
 }
 ?>
