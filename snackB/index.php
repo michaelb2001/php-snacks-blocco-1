@@ -11,10 +11,10 @@ $age = $_GET['age'];
 
 if((strlen($name)>3)&&
     ((strpos($mail, '@') !== false)&&(strpos($mail,'.') !== false))&&
-    (is_int($age))){
+    (is_int($age) == true)){
         echo "Accesso riuscito";
     }else{
-        "accesso negato";
+        echo "accesso negato";
     }
 ?>
 
